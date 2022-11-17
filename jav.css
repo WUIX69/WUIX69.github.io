@@ -1,7 +1,17 @@
+body{
+	background-color: #98989C;
+}
+
 table {
 	height: 100vh;
 	width:50%;
 	justify-content: center;
+}
+
+th {
+color: green;
+font-family: courier new;
+font-weight: bold;	
 }
 
 caption {
@@ -19,7 +29,7 @@ outline: none;
 border-collapse: collapse;
 border: 1px solid black;
 padding: 5px 10px;
-font-family: courier new;
+font-family: System-ui;
 }
 
 ul, li {
@@ -29,19 +39,28 @@ border: 0;
 outline: none;
 padding: 10px 50px;
 list-style: none;
-text-decoration: none;
 }
 
-button {
-font-size: 17px;
+button a {
+font-size: 20px;
+justify-content: center;
 display: flex;
 cursor: pointer;
+border: 0;
+outline: none;
 text-decoration: none;
+color: white;
+text-transform: capitalize;
+color: #28282B;
 }
 
 input {
-	font-size:12px;
-	text-decoration: none;
+	font-size:14px;
 	justify-content:center;
-	display: flex;
+	display: inline-block;
+	cursor: pointer;
+	outline: none;
+	border: 0;
+	font-family: Lucida Sans Unicode;
+	font-weight: bold;
 }

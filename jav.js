@@ -13,6 +13,8 @@ function add_Function() {
 	document.getElementById("new_Fname").value="";
 	document.getElementById("new_Lname").value="";
 	document.getElementById("new_course").value="";
+	
+	alert("Successfully added!")
 }
 
 function edit_row(no)
@@ -50,12 +52,30 @@ function save_row(no)
 
  document.getElementById("eBtn"+no).style.display="block";
  document.getElementById("sBtn"+no).style.display="none";
+ 
+ alert("Successfully Saved!");
 }
 
-function delete_function() {
-  var table = document.getElementById("allTable");
-  var table_len = (table.rows.length)-1;
-  var row = table.deleteRow(table_len);
+function del_function() {
+  var index, table = document.getElementById("allTable");
+  var table_reduce = (table.rows.length);
+  
+            for(var i = 1; i < table_reduce; i++)
+            {
+                table.rows[i].cells[4].onclick = function()
+                {
+                    var c = confirm("Do you want to delete this row, You can't undo this!");
+                    if(c === true)
+                    {
+                        index = this.parentElement.rowIndex;
+                        table.deleteRow(index);
+                    }
+                    
+                    
+                };
+                
+            }
+	
 }
 
 
