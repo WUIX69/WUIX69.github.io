@@ -24,10 +24,9 @@ caption {
 table tr, td, th {
 text-align:center;
 border-radius: 10px;
-border: 0;
 outline: none;
 border-collapse: collapse;
-border: 1px solid black;
+border: 2px solid black;
 padding: 5px 10px;
 font-family: System-ui;
 }
