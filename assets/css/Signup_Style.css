@@ -1,0 +1,327 @@
+*, ::after, ::before 
+{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+}
+
+@font-face
+{
+	src: url(../fonts/OpenSans-Regular.ttf);
+	font-family: opensans;
+}
+
+body, html
+{
+
+	font-family: opensans;
+	font-size: 16px;
+	word-break: break-word;
+	word-wrap: break-word;
+	height: 100%;
+
+}
+
+html
+{
+  scroll-behavior: smooth;
+}
+
+h1
+{
+  color: #FFF01F;
+}
+
+h2
+{
+  color: #aa2424;
+}
+
+/***********Seperating CSS************/
+.rightcolumn 
+{
+  width: 100%;
+  max-width: 500px;
+  margin-top: -1.5em;
+  justify-content: center;
+  
+  position: absolute;
+  left: 32%;
+}
+
+/*.fakeimg 
+{
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}*/
+
+.card 
+{
+   padding-top: 45px;
+   background-color: rgb(0,0,0,0); /* Transparent Magic */
+   width: 100%;
+   max-width: 500px;
+   justify-content: center;
+}
+
+.row:after 
+{
+  content: "";
+  display: table;
+  clear: both;
+}
+/**********end of Seperating*********/
+
+/***************************Form Css*************************/		
+.Mform
+{
+
+	width: 100%;
+	max-width: 500px;
+	background-color: #1B1C25;
+	color: rgb(255, 255, 255);
+	position: absolute;
+	top: 45px;
+	border-radius: 2%;
+	overflow: hidden;
+  box-shadow: 0 0 10px #888888, 
+              0 0 20px #777777, 
+              0 0 30px #666666;
+	
+	
+}
+
+.image_container
+{
+
+	width: 100%;
+	color: rgb(255, 255, 255);
+}
+
+.Ximage
+{
+
+	width:100%;
+	height:200px;
+	object-fit: cover;
+}
+
+.logo
+{
+
+	width: 180px;
+	height: 180px;
+	object-fit: cover;
+	top: 154px;
+	border-radius: 50%;
+	margin-top: -94px;
+	justify-content: center;
+	text-align: center;
+	/*border: 8px solid rgb(238, 238, 238);*/
+	
+}
+
+.img_center
+{
+	margin-top: -0.90em;
+	justify-content: center;
+	text-align: center;
+}
+
+.hd
+{
+
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-top: 0px;
+	left: -3px;
+	margin-bottom: -0.50em;
+	color: rgb(231, 190, 76);
+  text-align: center;
+	letter-spacing: 2px;
+}
+
+/***************INPUT HOVERING***************/
+form .txt_field
+{
+	position: relative;
+	border-bottom: 2.5px solid #adadad;
+	margin: 30px 0;
+	width: 385px;
+	margin-left: 3.5em;
+}
+
+.txt_field input
+{
+	width: 100%;
+	padding: 0 5px;
+	height: 40px;
+	font-size: 16px;
+	border: none;
+	background: none;
+	outline: none;
+}
+
+.txt_field label
+{
+	position: absolute;
+	top: 50%;
+	left: 5px;
+	color: rgb(164, 93, 93);
+	transform: translateY(-50%);
+	font-size: 16px;
+	pointer-events: none;
+	transition: .5s;
+}
+
+.txt_field span::before
+{
+	content: '';
+	position: absolute;
+	top: 40px;
+	left: 0;
+	width: 0%;
+	height: 2px;
+	background: rgb(231, 190, 76);
+	transition: .5s;
+}
+
+.txt_field input:focus ~ label,
+.txt_field input:valid ~ label
+{
+	top: -5px;
+	color: #EDD94C;
+}
+
+.txt_field input:focus ~ span::before,
+.txt_field input:valid ~ span::before
+{
+	width: 100%;
+}
+/*************END of INPUT HOVERING**************/
+
+.txt_div
+{
+
+	padding: 5px;
+	left: -17px;
+	margin-top: 0.50em;
+	margin-bottom: 1.5em;
+	font-size: 14px;
+	text-align: center;
+	justify-content: center;
+}
+
+.txtDiv_button
+{
+
+	width: 100%;
+	/*padding: 10px;*/
+	color: rgb(255, 255, 255);
+	text-align: center;
+	/*height: 154px;*/
+	top: 574px;
+	margin-top: 1em;
+	
+}
+
+.btn_log
+{
+
+	font-size: 20px;
+	font-weight: 600;
+	padding: 10px;
+	border: medium none;
+	color: rgb(255, 255, 255);
+	background-color: rgb(13, 110, 253);
+	border-radius: 30px;
+	margin: 0.25rem 0.125rem;
+	cursor: pointer;
+	width: 400px;
+	height: 51.2px;
+	margin-top: 0.50em;
+	
+}*/
+
+/**********Hovering Button**************/
+.btn_log
+{
+
+	font-size: 16px;
+	font-weight: 600;
+	padding: 10px;
+	border: medium none;
+	color: #FFFFFF;
+	background-color: rgb(13, 110, 253);
+	border-radius: 30px;
+	margin: 0.25rem 0.125rem;
+	margin-top: 1em;
+	cursor: pointer;
+	width: 400px;
+	height: 51.2px;
+	transition: all 0.5s;
+}
+
+.btn_log span 
+{
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.btn_log span:after 
+{
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.btn_log:hover span 
+{
+  padding-right: 25px;
+}
+
+.btn_log:hover span:after 
+{
+  opacity: 1;
+  right: 0;
+}
+
+/*******Link Hovering a*******/
+a
+{
+	text-decoration: none;
+	color: rgb(164, 93, 93);
+  text-align: center;
+	letter-spacing: 2px;
+}
+
+a:hover
+{
+  transition: 0.3s ease-out;
+  font-size: 150%;
+  font-weight: 600;
+  color: #FFF01F;	
+}
+/****End of button hoverring****/
+
+/*******************************END of FORM's CSS*****************************/
+
+/*******Merging to Absolute for blurred background image new UI**********/
+.container
+{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 2;
+	width: 100%;
+	height: 100%;
+}
+/**************END of Merging**************/

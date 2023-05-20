@@ -1,0 +1,244 @@
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
+@font-face{
+	src: url(../fonts/OpenSans-Regular.ttf);
+	font-family: opensans;
+}
+
+body{
+
+	font-family: opensans;
+	font-size: 16px;
+	margin:0px;
+	padding:0px;
+	word-break: break-word;
+	word-wrap: break-word;
+}
+	
+	
+	@keyframes navd-appear{
+	0%{transform: translateX(50px);opacity: 0}
+	100%{transform: translateX(0px);opacity: 1}
+}
+
+.item_class_tbl > :not(caption) > * > * {
+    padding: .5rem .5rem;
+    border-bottom-width: 2px;
+    background-color: #1B1C25;
+    color: #ffffff;
+    padding-top: 12px;
+  }
+
+  .item_class_tbl {
+    caption-side: bottom;
+    border-collapse: collapse;
+  }
+  tbody, td, tfoot, th, thead, tr {
+    border-color: #e2e5e9;
+    border-style: solid;
+    border-width: 0;
+  }
+
+.item_class_tbl thead{
+  background-color: #f9f9f9;
+}
+
+.item_class_tbl {
+  background-color: #fff;
+  width: 100%;
+  margin-bottom: 2rem;
+  color: #212529;
+  vertical-align: top;
+}
+
+.container{
+
+	width: 100%;
+	padding: 10px;
+	padding-top: 80px;
+	background-color: #1B1C25;
+	color: #ffffff;
+	text-align: center;
+	
+}
+
+.title{
+
+	padding-left: 10px;
+	padding-right: 10px;
+	color: #ffffff;
+	
+}
+
+.card{
+
+	overflow-x: auto;
+	min-width: 350px;
+	
+}
+
+.img_th{
+
+	width: 180px;
+	
+}
+
+.imgx{
+
+	width: 100px;
+	height: 100px;
+	object-fit: cover;
+	
+}
+
+.btn_remove{
+
+	font-size: 16px;
+	padding: 10px;
+	border: medium none;
+	color: rgb(255, 255, 255);
+	background-color: #B33F40;
+	border-radius: 6px;
+	margin: 0.25rem 0.125rem;
+	cursor: pointer;
+	transition: all 0.5s
+	
+}
+
+.btn_remove span 
+{
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+  font-weight: 600;
+}
+
+
+.btn_remove:hover 
+{
+  background-color: #FF3131;
+}
+
+
+.total{
+
+	left: -3px;
+	font-weight: bold;
+	
+}
+
+.footer{
+
+	padding: 20px;
+	background-color: #393E46;
+	color: rgb(255, 255, 255);
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	
+}
+
+.text_exp{
+	display: inline-block;
+	max-width: 200px;
+	font-weight: normal;
+	font-size: 12px;
+}
+
+.footer_column{
+
+	padding: 10px;
+	color: rgb(255, 255, 255);
+	min-width: 300px;
+	margin-top: 2px;
+	margin-bottom: 2px;
+	
+}
+
+.txt_lbl{
+
+	color: rgb(255, 255, 255);
+	display: block;
+	margin-top: 8px;
+	font-weight: normal;
+	font-size: 12px;
+	
+}
+
+
+/****************Navigation****************/
+.navd {
+	width:100%;
+	background-color: rgba(0,0,0,.2);
+	text-align: center;
+	position: fixed;
+	overflow-y: fixed;
+	z-index: 99;
+	height: 80px;
+	
+}
+
+.navd, ul, li, .a1, .a2, .a3, .a4, .a5, .a6, .a7, .a8{
+	text-align: center;
+	list-style: none;
+	display: inline-block;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 20px;
+	letter-spacing: 2px;
+	font-weight: 600;
+	color: #fff;
+	font-family: 'Raleway', sans-serif;
+	padding: 2px 10px;
+}
+
+.a1:hover, .a1:active {
+  transition: all ease 0.5s;
+  font-size: 150%;
+  color: #EAE7B1;
+}
+
+.a2:hover, .a2:active {
+  transition: all ease 0.5s;
+  font-size: 150%;
+  color: #EAE7B1;
+}
+
+.a3:hover, .a3:active {
+  transition: all ease 0.5s;
+  font-size: 150%;
+  color: #EAE7B1;
+}
+
+.a4:hover, .a4:active {
+  transition: all ease 0.5s;
+  font-size: 150%;
+  color: #EAE7B1;
+}
+
+.a5:hover, .a5:active {
+  transition: all ease 0.5s;
+  font-size: 150%;
+  color: #EAE7B1;
+}
+
+.a6:hover, .a6:active {
+  transition: all ease 0.5s;
+  font-size: 150%;
+  color: #EAE7B1;
+}
+
+.a7:hover, .a7:active {
+  transition: all ease 0.5s;
+  font-size: 150%;
+  color: #EAE7B1;
+}
+
+.a8:hover, .a8:active {
+  transition: all ease 0.5s;
+  font-size: 150%;
+  color: #EAE7B1;
+}

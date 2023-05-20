@@ -1,0 +1,253 @@
+*, ::after, ::before {
+  box-sizing: border-box;
+  justify-content: center;
+  color: #ffffff;
+}
+
+@font-face{
+	src: url(../fonts/OpenSans-Regular.ttf);
+	font-family: opensans;
+}
+
+body{
+
+	font-family: opensans;
+	font-size: 16px;
+	margin:0px;
+	padding:0px;
+	word-break: break-word;
+	word-wrap: break-word;
+	justify-content: center;
+	
+	background-image: url("	../images/Nice.jpg"	);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.container {
+	padding-left: 50px;
+	max-width: 540px;
+	height: 0 auto;
+	max-width: 600px;
+	margin: 50px auto 0;
+	z-index: 0;
+}
+
+		
+.Mform{
+	max-width: 540px;
+	padding: 10px;
+	margin-top: -2.5em;
+	height: 0 auto;
+	color: rgb(0, 0, 0);
+	border-radius: 10px;
+	box-shadow: rgb(170, 170, 170) 1px 1px 30px;
+	background-color: rgba(0,0,0, .60);	
+  z-index: 999;
+}
+
+.Mform button{
+	margin-top: 10px;
+}
+
+.heading{
+	padding-top: -0.90rem;
+	padding-left: 10px;
+	padding-right: 10px;
+	text-align: center;
+	
+}
+
+.icon{
+	font-size: 40px;
+}
+
+.card{
+
+	
+	color: rgb(0, 0, 0);
+	text-align: center;
+	padding: 10px;
+	
+}
+
+.card img{
+	transition: all .3s ease;
+	cursor: pointer;
+}
+
+.card img:hover{
+
+	box-shadow: 0 0 10px #888888, 
+              0 0 20px #777777, 
+              0 0 30px #666666;
+	transform: translateY(-10px);
+
+}
+
+.card img:hover{
+
+  transform: translateX(-1px) scale(1.5);
+  transition: all .5s ease;
+  border-radius: 5px;
+ 
+  max-width: 200px;
+  height: 100%;
+  text-align: center;
+  justify-content: center;
+
+}
+
+.imgX{
+
+	width: 150px;
+	height: 150px;
+	object-fit: cover;
+	border-radius: 10px;
+	margin-top: -1em;
+	
+}
+
+.upload_image{
+
+	display: block;
+	margin: auto;
+	padding-top: 15px;
+	padding-left: 69px;
+
+}
+
+.div_txt{
+
+	display: flex;
+	margin-top:4px;
+	margin-bottom: 4px;
+	padding: 4px;
+	padding-left: 10px;
+	align-items: center;
+	background-color: rgba(0,0,0, .60);
+	border-radius: 6px;
+	font-size: 13px;
+	font-weight: bold;
+	
+}
+
+.div_lbl{
+
+	min-width: 50px;
+	margin: 0.5rem 0.5rem 0.5rem 0px;
+	display: inline-block;
+	width: 147px;
+	
+}
+
+.div_upload{
+
+	display: block;
+	width: 100%;
+	padding: .375rem .75rem;
+	font-size: 1rem;
+	font-weight: bold;
+	line-height: 1.5;
+	color: #ffffff;
+	background-color: rgba(0,0,0, .80);	
+	background-clip: padding-box;
+	border: 1px solid #ced4da;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	border-radius: .375rem;
+	transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+	
+}
+
+.btn_cancel{
+
+	font-size: 16px;
+	padding: 10px;
+	border: medium none;
+	color: rgb(255, 255, 255);
+	background-color: rgb(253, 111, 59);
+	border-radius: 6px;
+	margin: 0.25rem 0.125rem;
+	cursor: pointer;
+	
+}
+
+.btn_cancel span 
+{
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+  font-weight: 600;
+}
+
+.btn_cancel span:after 
+{
+  content: '❌';
+  position: absolute;
+  opacity: 0;
+  top: -3px;
+  right: -20px;
+  font-size: 17px;
+  transition: 0.5s;
+}
+
+.btn_cancel:hover span 
+{
+  padding-right: 30px;
+}
+
+.btn_cancel:hover span:after 
+{
+  opacity: 1;
+  right: 0;
+}
+
+.btn_create{
+
+	font-size: 16px;
+	padding: 10px;
+	border: medium none;
+	color: rgb(255, 255, 255);
+	background-color: #6577B3;
+	border-radius: 6px;
+	margin: 0.25rem 0.125rem;
+	cursor: pointer;
+	float: right;
+	
+}
+.btn_create span 
+{
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+  font-weight: 600;
+}
+
+.btn_create span:after 
+{
+  content: '🔰';
+  position: absolute;
+  opacity: 0;
+  top: -8px;
+  right: -20px;
+  font-size: 25px;
+  transition: 0.5s;
+}
+
+.btn_create:hover span 
+{
+  padding-right: 30px;
+}
+
+.btn_create:hover span:after 
+{
+  opacity: 1;
+  right: 0;
+}
+
+
