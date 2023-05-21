@@ -17,6 +17,7 @@ body{
 	word-break: break-word;
 	word-wrap: break-word;
 	color: #ffffff;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 			
 	@keyframes menu-appear{
@@ -120,6 +121,7 @@ body{
 	background-color: #1B1C25;
 	color: #ffffff;
 	text-align: center;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 	
 }
 
@@ -127,7 +129,8 @@ body{
 
 	padding-left: 10px;
 	padding-right: 10px;
-	color: #ffffff;
+	color: #f8dd31;
+	letter-spacing: 1.5px;
 	
 }
 
@@ -159,7 +162,7 @@ body{
 
 .font_txt{
 
-	padding-left: 10px;
+	padding-left: 3px;
 	padding-right: 10px;
 	left: -1px;
 	color: #ffffff;
@@ -207,10 +210,10 @@ body{
 
 .Pfont{
 
-	padding-left: 10px;
+	padding-left: 7px;
 	padding-right: 10px;
 	color: #ffffff;
-	padding-top: 10px;	
+	padding-top: 20px;	
 }
 
 .cardlbl{
@@ -219,6 +222,7 @@ body{
 	display: flex;
 	align-items: center;
 	color: #ffffff;
+	font-weight: bold;
 	
 }
 
@@ -233,14 +237,16 @@ body{
 
 	font-size: 30px;
 	margin-left: 9px;
+	color: #Ffffff;
 	
 }
 
 .paylbl{
 
 	font-size: 20px;
+	font-weight: bold;
 	display: flex;
-	color: #ffffff;
+	color: #Ffffff;
 	align-content: center;
 	align-items: center;
 	

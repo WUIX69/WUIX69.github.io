@@ -162,6 +162,7 @@ form .txt_field
 	border: none;
 	background: none;
 	outline: none;
+	color: #ffffff;
 }
 
 .txt_field label
@@ -250,7 +251,7 @@ form .txt_field
 {
 
 	font-size: 16px;
-	font-weight: 600;
+	font-weight: bold;
 	padding: 10px;
 	border: medium none;
 	color: #FFFFFF;
@@ -270,6 +271,9 @@ form .txt_field
   display: inline-block;
   position: relative;
   transition: 0.5s;
+  font-weight: bold;
+  font-size: 17px;
+
 }
 
 .btn_log span:after 
@@ -294,7 +298,7 @@ form .txt_field
 }
 
 /*******Link Hovering a*******/
-a
+.Signup_ref
 {
 	text-decoration: none;
 	color: rgb(164, 93, 93);
@@ -302,11 +306,13 @@ a
 	letter-spacing: 2px;
 }
 
-a:hover
+.Signup_ref:hover
 {
   transition: 0.3s ease-out;
-  font-size: 150%;
-  font-weight: 600;
+  font-size: 120%;
+  overflow: hidden;
+
+  font-weight: bold;
   color: #FFF01F;	
 }
 /****End of button hoverring****/

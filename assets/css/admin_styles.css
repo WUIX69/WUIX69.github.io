@@ -16,6 +16,7 @@ body{
 	padding:0px;
 	word-break: break-word;
 	word-wrap: break-word;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }		
   
  .item_class_0 > :not(caption) > * > * {
@@ -177,7 +178,7 @@ body{
 	padding-left: 20px;
 	padding-top: 20px;
 	font-size: 45px;
-	color: #ffffff;
+	color: #F8DD31;
 	
 }
 

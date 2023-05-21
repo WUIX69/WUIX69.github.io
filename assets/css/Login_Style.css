@@ -20,7 +20,7 @@ body, html
 	word-break: break-word;
 	word-wrap: break-word;
 	color: #ffffff;
-	height: 100%;
+	height: 100vh;
 
 }
 
@@ -49,7 +49,6 @@ h2
 {
 
 	width: 100%;
-	max-width: 500px;
 	margin: 0px auto;
 	background-color: #1B1C25;
 	top: 45px;
@@ -59,7 +58,7 @@ h2
   box-shadow: 0 0 10px #888888, 
               0 0 20px #777777, 
               0 0 30px #666666;
-	height: 590px;
+	height: auto;
 	
 }
 
@@ -123,6 +122,7 @@ form .txt_field
 	border: none;
 	background: none;
 	outline: none;
+	color: #ffffff;
 }
 
 .txt_field label
@@ -207,17 +207,13 @@ form .txt_field
 	transition: all 0.5s;
 }
 
-.Loginref{
-	text-decoration: none;
-	color: rgb(164, 93, 93);
-}
-
 .btn_new span 
 {
   cursor: pointer;
   display: inline-block;
   position: relative;
   transition: 0.5s;
+  text-decoration: none;
 }
 
 .btn_new span:after 
@@ -253,8 +249,10 @@ form .txt_field
 .Signup_ref:hover
 {
   transition: 0.3s ease-out;
-  font-size: 150%;
-  font-weight: 600;
+  font-size: 120%;
+  overflow: hidden;
+
+  font-weight: bold;
   color: #FFF01F;	
 }
 /****End of button hoverring****/
@@ -267,9 +265,12 @@ form .txt_field
 	position: absolute;
 	top: 50%;
 	left: 50%;
+	right: 50%;
+	margin-bottom: 50%;
 	transform: translate(-50%, -50%);
 	z-index: 2;
 	width: 100%;
-	height: 100%;
+	max-width: 500px;
+	height: 590px;
 }
 /**************END of Merging**************/
