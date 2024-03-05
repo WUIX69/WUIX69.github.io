@@ -15,10 +15,10 @@ window.addEventListener('DOMContentLoaded', event => {
         if (!navbarCollapsible) {
             return;
         }
-        if (window.scrollY === 0) {
-            navbarCollapsible.classList.remove('navbar-shrink')
+        if (window.scrollY > 0) { // Fix: Change the condition to check if scrolled more than 0
+            navbarCollapsible.classList.add('navbar-shrink'); // Fix: Add class to shrink navbar
         } else {
-            navbarCollapsible.classList.add('navbar-shrink')
+            navbarCollapsible.classList.remove('navbar-shrink'); // Fix: Remove class to expand navbar
         }
 
     };
@@ -52,18 +52,6 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 });
-
-var i = 0;
-var txt = 'Lorem ipsum dummy text blabla.';
-var speed = 50;
-
-function typeWriter() {
-  if (i < txt.length) {
-    document.getElementById("demo").innerHTML += txt.charAt(i);
-    i++;
-    setTimeout(typeWriter, speed);
-  }
-}
 
 /* Enhanced Typing mechanics with smoother and faster typing and blinking cursor */
 document.addEventListener("DOMContentLoaded", function() { // On DOM Load initiate the effect
@@ -127,4 +115,3 @@ document.addEventListener("DOMContentLoaded", function() { // On DOM Load initia
 
     if(textArray.length) setTimeout(type, newTextDelay + 250);
 });
-
