@@ -71,6 +71,22 @@
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
             <div class="container">
                 <a class="navbar-brand" href="#page-top"><img style="max-width: 110px; height: 79px;" src="assets/img/sacred.logo.png" alt="..."/></a>
+                    <!-- Hello Animation -->
+                    <a class="navbar-brand">
+                        <div class="content">
+                            <div class="content__container">
+                                <p class="content__container__text">
+                                Hello
+                                </p>
+                                <ul class="content__container__list">
+                                    <li class="content__container__list__item">world !</li>
+                                    <li class="content__container__list__item">nomer !</li>
+                                    <li class="content__container__list__item">SHA-bu !</li>
+                                    <li class="content__container__list__item">everybody !</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars ms-1"></i>
@@ -84,7 +100,7 @@
                         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">
                             
-                                <!-- Hello Animation -->
+                                <!-- Hello Animation
                                 <div class="content">
                                     <div class="content__container">
                                         <p class="content__container__text">
@@ -97,7 +113,7 @@
                                             <li class="content__container__list__item">everybody !</li>
                                         </ul>
                                     </div>
-                                </div>
+                                </div>-->
 
                             </a>
                         </li>
@@ -115,51 +131,8 @@
         </nav>
         <header class="masthead"> <!-- Masthead-->
             <div class="container">
-                
-                <!--<div class="masthead-subheading">Welcome To Sacred Heart Academy!</div>-->
                 <div class="masthead-heading text-uppercase"><span class="typing"></span></div>
                 <div class="masthead-subheading">Here you can choose your Career Path</div>
-
-                <!--Removed Script-->
-                <!--<script>
-                    // Typing animation for masthead heading
-                    const typedTextSpan = document.querySelector(".typing");
-                    const textArray = ["Welcome To Sacred Heart Academy!", "Choose Your Career Path", "Explore. Learn. Succeed."];
-                    const typingDelay = 200;
-                    const erasingDelay = 100;
-                    const newTextDelay = 2000; // Delay between current and next text
-                    let textArrayIndex = 0;
-                    let charIndex = 0;
-
-                    function type() {
-                        if (charIndex < textArray[textArrayIndex].length) {
-                            typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
-                            charIndex++;
-                            setTimeout(type, typingDelay);
-                        } else {
-                            // Erase after the whole text is typed
-                            setTimeout(erase, newTextDelay);
-                        }
-                    }
-
-                    function erase() {
-                        if (charIndex > 0) {
-                            typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex-1);
-                            charIndex--;
-                            setTimeout(erase, erasingDelay);
-                        } else {
-                            // Move to the next text after the current text is erased
-                            textArrayIndex++;
-                            if(textArrayIndex>=textArray.length) textArrayIndex=0;
-                            setTimeout(type, typingDelay + 1100);
-                        }
-                    }
-
-                    document.addEventListener("DOMContentLoaded", function() { // On DOM Load initiate the effect
-                        if(textArray.length) setTimeout(type, newTextDelay + 250);
-                    });
-                </script>-->
-
                 <a class="btn btn-primary btn-xl text-uppercase" href="#services">Tell Me More</a>
             </div>
         </header>
@@ -405,6 +378,68 @@
                 <div class="row">
                     <div class="col-lg-8 mx-auto text-center"><p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p></div>
                 </div>
+            </div>
+        </section>
+
+        <!-- Contact-->
+        <section class="page-section" id="contact">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Contact Us</h2>
+                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                </div>
+                <!-- * * * * * * * * * * * * * * *-->
+                <!-- * * SB Forms Contact Form * *-->
+                <!-- * * * * * * * * * * * * * * *-->
+                <!-- This form is pre-integrated with SB Forms.-->
+                <!-- To make this form functional, sign up at-->
+                <!-- https://startbootstrap.com/solution/contact-forms-->
+                <!-- to get an API token!-->
+                <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                    <div class="row align-items-stretch mb-5">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <!-- Name input-->
+                                <input class="form-control" id="name" type="text" placeholder="Your Name *" data-sb-validations="required" />
+                                <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
+                            </div>
+                            <div class="form-group">
+                                <!-- Email address input-->
+                                <input class="form-control" id="email" type="email" placeholder="Your Email *" data-sb-validations="required,email" />
+                                <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
+                                <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+                            </div>
+                            <div class="form-group mb-md-0">
+                                <!-- Phone number input-->
+                                <input class="form-control" id="phone" type="tel" placeholder="Your Phone *" data-sb-validations="required" />
+                                <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group form-group-textarea mb-md-0">
+                                <!-- Message input-->
+                                <textarea class="form-control" id="message" placeholder="Your Message *" data-sb-validations="required"></textarea>
+                                <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Submit success message-->
+                    <!---->
+                    <!-- This is what your users will see when the form-->
+                    <!-- has successfully submitted-->
+                    <div class="d-none" id="submitSuccessMessage">
+                        <div class="text-center text-white mb-3">
+                            <div class="fw-bolder">Form submission successful!</div>
+                        </div>
+                    </div>
+                    <!-- Submit error message-->
+                    <!---->
+                    <!-- This is what your users will see when there is-->
+                    <!-- an error submitting the form-->
+                    <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
+                    <!-- Submit Button-->
+                    <div class="text-center"><button class="btn btn-primary btn-xl text-uppercase disabled" id="submitButton" type="submit">Send Message</button></div>
+                </form>
             </div>
         </section>
 

@@ -4021,6 +4021,7 @@ textarea.form-control-lg {
     padding: 0;
     overflow-y: visible;
   }
+  
 }
 @media (min-width: 1200px) {
   .navbar-expand-xl {
@@ -10995,9 +10996,9 @@ p {
   text-shadow: 0 0 10px #ffc800, 0 0 20px #ffc800; /* Added glowing text shadow effect */
   transform: scale(1.1); /* Scale up link slightly to center it on hover */
 }
-#mainNav .navbar-nav .nav-item:nth-child(6) .nav-link {
-  pointer-events: none;
-  cursor: default;
+#mainNav .navbar-nav .nav-item:nth-child(6) {
+  margin-right: -5rem;
+  padding-left: 50px;
 }
 
 
@@ -11033,16 +11034,11 @@ p {
     margin-right: 1rem;
     margin-top: 1.5rem;
   }
- 
-  #mainNav .navbar-nav .nav-item:nth-child(6) {
-    margin-right: -5rem;
-    padding-left: 50px;
-  }
 
   #mainNav .navbar-nav .nav-item:last-child {
     margin-right: -5rem;
-    margin-top: 0.7rem;
-    padding-left: 110px;
+    margin-top: 0.8rem;
+    padding-left: 20px;
   }
 }
 header.masthead {
@@ -11050,7 +11046,7 @@ header.masthead {
   padding-bottom: 6rem;
   text-align: center;
   color: #fff;
-  background-image: url("../assets/img/sacred_log.png");
+  background-image: url("../assets/img/sacred_building.jpeg");
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
@@ -11365,6 +11361,8 @@ section#contact {
   background-image: url("../assets/img/map-image.png");
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
+  background-position: center; /* Lowering the background image */
 }
 section#contact .section-heading {
   color: #fff;
@@ -11424,10 +11422,4 @@ section#contact form#contactForm :-ms-input-placeholder {
 
 .clients-section {
   background-color: #3D3B40;
-}
-
-@media (max-width: 768px) {
-  #mainNav .navbar-nav .nav-item:nth-child(6) {
-    display: none;
-  }
 }
