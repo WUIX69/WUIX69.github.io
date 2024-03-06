@@ -64,10 +64,10 @@
   @media (max-width: 576px) {
     .content{
       max-width: auto !important;
-      margin-left: 65px;
+      margin-left: auto !important;
     }
     .content__container{
-      max-width: 161px !important;
+      max-width: 160 !important;
     }
     .content__container__text {
       font-size: 9px;
@@ -80,14 +80,14 @@
     .content__container__list__item {
       line-height: 43px;
       font-size: 9px;
-      padding-left: 40px;
+      margin-left: -5px;
     }
   }
 
   @media (max-width: 768px) {
     .content{
       max-width: auto !important;
-      margin-left: 65px;
+      margin-left: auto !important;
     }
     .content__container{
       max-width: 161px !important;
