@@ -64,23 +64,23 @@
   @media (max-width: 576px) {
     .content{
       max-width: auto !important;
-      margin-left: auto !important;
+      position: relative;
+      left: 30%;
     }
     .content__container{
-      max-width: 160 !important;
+      max-width: auto !important;
     }
     .content__container__text {
       font-size: 9px;
-      margin-left: -15px;
-      margin-top: 0.5rem;
+      margin-top: -0.5rem;
     }
     .content__container__list {
       padding-left: 0px;
     }
     .content__container__list__item {
-      line-height: 43px;
+      line-height: 44px;
       font-size: 9px;
-      margin-left: -5px;
+      margin-left: -0.5rem;
     }
   }
 
