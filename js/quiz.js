@@ -95,6 +95,8 @@ nextBtn.addEventListener(
                 cancelButtonText: "Show Result",
                 cancelButtonColor: "#836FFF",
                 confirmButtonColor: "#265073",
+                showCloseButton: true,
+                allowOutsideClick: false
                 
 
             }).then((result) => {
@@ -132,6 +134,7 @@ nextBtn.addEventListener(
                                 imageAlt: "Custom image"
                             });
                         }
+                        
                     });
                 }
             });
