@@ -16,6 +16,7 @@
         <link href="css/sky.css" rel="stylesheet"/>
         <link rel="stylesheet" href="css/hello.css">
         <link rel="stylesheet" href="css/heart.css">
+        <link rel="stylesheet" href="css/quiz.css">
         
         <style></style>
 
@@ -79,10 +80,10 @@
                                 Hello
                                 </p>
                                 <ul class="content__container__list">
-                                    <li class="content__container__list__item">world !</li>
-                                    <li class="content__container__list__item">nomer !</li>
                                     <li class="content__container__list__item">SHA-bu !</li>
+                                    <li class="content__container__list__item">Sta.maria !</li>
                                     <li class="content__container__list__item">everybody !</li>
+                                    <li class="content__container__list__item">Nomer !</li>
                                 </ul>
                             </div>
                         </div>
@@ -121,7 +122,7 @@
                             <a class="nav-link" href="#" onclick="heart()">
                                 <div class="heart">
                                     <div class="heartbeat">❤️</div>
-                                        <div class="heartecho">❤️</div>
+                                        <div class="heartecho" id="beat" hidden="true">❤️</div>
                                 </div>
                             </a>
                         </li>
@@ -272,7 +273,16 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                    
+                    <!--Quiz-->
+                    <div class="p-4 g-col-12 col-lg-12 col-sm-12">
+                        <div class="portfolio-item">
+                                <div class="portfolio-caption remove">
+                                    <a class="portfolio-link" data-bs-toggle="modal"></a>
+                                            <a class="start-button btn btn-primary btn-xl text-uppercase" id="start-button" data-bs-toggle="modal" href="#Quiz"><dfn data-info="Click here now to embark on your journey of self-discovery and unlock the secrets to finding a fulfilling career that aligns perfectly with your passions and purpose!">Can't Decide Yet ?</dfn></a>
+                                </div>
+                        </div>
+                    </div>
             </div>
         </section>
 
@@ -904,11 +914,55 @@
             </div>
         </div>
 
+        <!-- Portfolio Quiz modal popup-->
+        <div class="portfolio-modal modal fade" id="Quiz" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <!-- Project details-->
+                                    <h2 class="text-uppercase">Career.AI</h2>
+                                    <p class="item-intro text-muted">Let me help you decide you're career as fast asfk</p>
+                                    
+                                    <!--Quiz-->
+                                    <div class="start-screen">
+                                    </div>
+                                    <div id="display-container">
+                                        <div class="header">
+                                            <div class="number-of-count">
+                                                <span class="number-of-question">1 of 3 questions</span>
+                                            </div>
+                                            <div class="timer-div">
+                                                <img src="https://uxwing.com/wp-content/themes/uxwing/download/time-and-date/stopwatch-icon.png"
+                                                    width="20px" />
+                                                <span class="time-left">10s</span>
+                                            </div>
+                                        </div>
+                                        <div id="container">
+                                            <!-- questions and options will be displayed here -->
+                                        </div>
+                                        <button id="next-button">Next</button>
+                                    </div>
+                                    <div class="score-container hide">
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!----------- Scripts ----------->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <script src="js/scripts.js"></script>
         <script src="js/sweetalert.js"></script>
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
         <script src="js/sky.js"></script>
+        <script src="js/quiz.js"></script>
     </body>
 </html>

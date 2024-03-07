@@ -33,6 +33,10 @@ function heart() {
                 title: "Rizz successfully enabled"
             });
 
+            // CSS Stricks
+            const beat = document.getElementById('beat');
+            beat.hidden = false;
+
             const snowflakes = document.getElementById('snowflakes');
             snowflakes.hidden = false;
 
@@ -184,8 +188,32 @@ function heart() {
             body.style.margin = '0';
         }
     }
-    
     setInterval(checkBodyPaddingAndMargin, 500);
+
+    // Create a random
+    setInterval(() => {
+    const position = ["top-start", "bottom-end", "top-end", "bottom-start"];
+    const pc = position[Math.floor(Math.random() * position.length)];
+
+    const image_url = ["https://i.makeagif.com/media/4-11-2023/0g0ODb.gif", "https://media1.tenor.com/m/kXXl0GWoLBkAAAAd/cat.gif", "https://media1.tenor.com/m/Mf937DWwuj0AAAAC/twerk-dance.gif", "https://i.makeagif.com/media/8-12-2023/k7ScTQ.gif", "https://c.tenor.com/mtiOW6O-k8YAAAAd/tenor.gif", "https://101jpsubs.weebly.com/uploads/1/2/7/3/127353258/erii-pfp_orig.gif", "https://i.redd.it/f8edargpw6f51.gif"];
+    const image = image_url[Math.floor(Math.random() * image_url.length)];
+
+    const Toast = Swal.mixin({
+        toast: true,
+        position: pc,
+        showConfirmButton: false,
+        timer: 5000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+          toast.onmouseenter = Swal.stopTimer;
+          toast.onmouseleave = Swal.resumeTimer;
+        }
+      });
+      Toast.fire({
+        imageUrl: image,
+        imageAlt: "Custom image"
+      });
+    }, 180000);
 
 }
 

@@ -45,7 +45,7 @@
     margin: 0;
   }
   .content__container__list {
-    margin-top: -3rem;
+    margin-top: -0.42rem;
     padding-left: 100px;
     text-align: left;
     list-style: none;
@@ -104,6 +104,29 @@
       line-height: 43px;
       font-size: 9px;
       padding-left: 40px;
+    }
+  }
+
+  @media (max-width: 400px) {
+    .content{
+      max-width: auto !important;
+      position: relative;
+      left: 25%;
+    }
+    .content__container{
+      max-width: auto !important;
+    }
+    .content__container__text {
+      font-size: 6px;
+      margin-top: -0.5rem;
+    }
+    .content__container__list {
+      padding-left: 0px;
+    }
+    .content__container__list__item {
+      line-height: 44px;
+      font-size: 6px;
+      margin-left: -0.5rem;
     }
   }
 
