@@ -69,7 +69,7 @@
   margin: 0;
 }
 
-@media (max-width: 576px) {
+/*@media (max-width: 576px) {
   .content {
     max-width: auto !important;
     position: relative;
@@ -94,7 +94,7 @@
     font-size: 9px;
     margin-left: -0.5rem;
   }
-}
+}*/
 
 @media (max-width: 768px) {
   .content {
@@ -120,12 +120,6 @@
     line-height: 43px;
     font-size: 9px;
     padding-left: 40px;
-  }
-}
-
-@include media-breakpoint-down(sm) {
-  .content {
-    display: block;
   }
 }
 
