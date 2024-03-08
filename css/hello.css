@@ -123,18 +123,24 @@
   }
 }
 
-@media (max-width: 500px) {
+@include media-breakpoint-down(sm) {
+  .content {
+    display: block;
+  }
+}
+
+/*@media (min-width: 500px) {
   .content {
     position: relative;
     left: 40%;
   }
 }
 
-@media (max-width: 400px) {
+@media (min-width: 400px) {
   .content {
     display: none;
   }
-}
+}*/
 
 @-webkit-keyframes opacity {
 
