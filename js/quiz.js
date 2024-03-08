@@ -8,7 +8,7 @@ let startScreen = document.querySelector(".start-screen");
 let startButton = document.getElementById("start-button");
 let questionCount;
 let scoreCount = 0;
-let count = 11;
+let count = 20;
 let countdown;
 //Questions and Options array
 
@@ -74,6 +74,15 @@ const quizArray = [
     },
 ];
 
+// Define a named function for the restart logic
+function restartQuiz() {
+    initial();
+    startScreen.classList.add("hide");
+    displayContainer.classList.remove("hide");
+
+    // Remove the restartQuiz event listener to prevent stacking
+    nextBtn.removeEventListener("click", restartQuiz);
+}
 
 // Update the logic in the 'displayNext' function to show the message with the specified title, text, and icon
 nextBtn.addEventListener(
@@ -81,9 +90,12 @@ nextBtn.addEventListener(
     (displayNext = () => {
         // Increment questionCount
         questionCount += 1;
+        
         // Check if it's the last question
         if (questionCount >= 10 || questionCount == quizArray.length) {
-            // Display the message with the specified title, text, and icon
+            
+            // Stop the timer
+            clearInterval(countdown);
             
             Swal.fire({
                 title: `You've got a ${scoreCount} out of ${quizArray.length}`,
@@ -95,19 +107,17 @@ nextBtn.addEventListener(
                 cancelButtonText: "Show Result",
                 cancelButtonColor: "#836FFF",
                 confirmButtonColor: "#265073",
-                showCloseButton: true,
-                allowOutsideClick: false
+                showCloseButton: false,
+                allowOutsideClick: false,
                 
 
             }).then((result) => {
                 if (result.isConfirmed) {
                     // Restart Quiz
-                    initial();
-                    displayContainer.classList.remove("hide");
-                    scoreContainer.classList.add("hide");
+                    restartQuiz();
 
                 }else{
-                    const results = ["You're an engineer, keep building man", "You're exactly a Programmer", "You're maybe good at Medical stuff", "You might choose Tourism, my guy", "You're an Artist, maybe ?", "You're a Gay man ( ͡° ͜ʖ ͡°)", "Si Nomer pa try niyo!" ];
+                    const results = ["You're a Bussiness related man","You're an Engineer, keep building man", "You're exactly a Programmer", "You're maybe good at Medical stuff", "You might choose Tourism, my guy", "You're an Artist, maybe ?", "You're a Gay man ( ͡° ͜ʖ ͡°)", "Si Nomer pa try niyo!" ];
                     const randomResult = results[Math.floor(Math.random() * results.length)];
 
                     let timerInterval;
@@ -116,22 +126,39 @@ nextBtn.addEventListener(
                         html: "Result will show in <b></b> milliseconds.",
                         timer: 2000,
                         timerProgressBar: true,
+
                         didOpen: () => {
                             Swal.showLoading();
                             const timer = Swal.getPopup().querySelector("b");
                             timerInterval = setInterval(() => {
                                 timer.textContent = `${Swal.getTimerLeft()}`;
                             }, 100);
+                            
                         },
+                        
                         willClose: () => {
                             clearInterval(timerInterval);
+
                             Swal.fire({
                                 title: "Sweet!",
                                 text: randomResult,
                                 imageUrl: "https://unsplash.it/400/200",
                                 imageWidth: 400,
                                 imageHeight: 200,
-                                imageAlt: "Custom image"
+                                imageAlt: "Custom image",
+
+                                didClose: () => {
+                                    if (questionCount >= 10 || questionCount == quizArray.length){
+                                        // Stop the timer
+                                        clearInterval(countdown);
+                                        
+                                        // Replace 
+                                        startScreen.innerHTML = "<h3>Congratulations, you've completed the quiz!. Your info will be migrated in our database asap</h3>";
+                                        startScreen.classList.remove("hide");
+                                        displayContainer.classList.add("hide");
+                                    }                                                                     
+                                    
+                                }
                             });
                         }
                         
@@ -142,7 +169,7 @@ nextBtn.addEventListener(
             // Display the next question
             countOfQuestion.innerHTML = questionCount + 1 + " of " + quizArray.length + " Question";
             quizDisplay(questionCount);
-            count = 11;
+            count = 20;
             clearInterval(countdown);
             timerDisplay();
         }
@@ -225,6 +252,7 @@ function checker(userOption) {
 
     //clear interval(stop timer)
     clearInterval(countdown);
+
     //disable all options
     options.forEach((element) => {
         element.disabled = true;
@@ -243,15 +271,10 @@ function initial() {
     quizContainer.innerHTML = "";
     questionCount = 0;
     scoreCount = 0;
-    count = 11;
+    count = 20;
     clearInterval(countdown);
     timerDisplay();
     quizCreator();
     quizDisplay(questionCount);
+    nextBtn.disabled = false; // Enable the button again, because of the swal logic
 }
-
-//hide quiz and display start screen
-window.onload = () => {
-    startScreen.classList.remove("hide");
-    displayContainer.classList.add("hide");
-};

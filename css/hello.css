@@ -123,9 +123,10 @@
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 300px) {
   .content {
-    display: none;
+    position: relative;
+    left: 5%;
   }
 }
 

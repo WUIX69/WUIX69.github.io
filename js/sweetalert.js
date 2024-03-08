@@ -202,7 +202,7 @@ function heart() {
         toast: true,
         position: pc,
         showConfirmButton: false,
-        timer: 5000,
+        timer: 8000,
         timerProgressBar: true,
         didOpen: (toast) => {
           toast.onmouseenter = Swal.stopTimer;
@@ -213,7 +213,7 @@ function heart() {
         imageUrl: image,
         imageAlt: "Custom image"
       });
-    }, 180000);
+    }, 120000);
 
 }
 

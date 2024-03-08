@@ -29,8 +29,8 @@
     </head>
 
     <!-------------------------------------------- Katawan -------------------------------------------->
-    <body id="page-top"> <!-- Navigation-->
-        <!-- snowflakes -->
+    <body id="page-top">
+        <!-- Snowflakes -->
         <div class="snowflakes" id="snowflakes" hidden="true">
             <div class="snowflake">
               <div class="inner">❤️</div>
@@ -70,6 +70,7 @@
             </div>
         </div>
 
+        <!-- Navigation -->
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
             <div class="container">
                 <a class="navbar-brand" href="#page-top"><img style="max-width: 110px; height: 79px;" src="assets/img/sacred.logo.png" alt="..."/></a>
@@ -131,7 +132,9 @@
                 </div>
             </div>
         </nav>
-        <header class="masthead"> <!-- Masthead-->
+
+        <!-- Masthead-->
+        <header class="masthead"> 
             <div class="container">
                 <div class="masthead-heading text-uppercase"><span class="typing"></span></div>
                 <div class="masthead-subheading">Here you can choose your Career Path</div>
@@ -281,7 +284,8 @@
                                 <div class="portfolio-caption remove">
                                     <a class="portfolio-link" data-bs-toggle="modal">
                                         <div class="wrapper">
-                                        <a class="hover-btn btn-xl text-uppercase" id="start-button" data-bs-toggle="modal" href="#Quiz"><!--<dfn data-info="Click here now to embark on your journey of self-discovery and unlock the secrets to finding a fulfilling career that aligns perfectly with your passions and purpose!">-->Can't Decide Yet ?</a></div>
+                                            <a class="hover-btn btn-xl text-uppercase" id="start-button" data-bs-toggle="modal" href="#Quiz">Can't Decide Yet ?</a>
+                                        </div>
                                     </a>
                                 </div>
                         </div>
@@ -512,6 +516,7 @@
 
 
         <!-- Portfolio Modals-->
+
         <!-- Portfolio item 1 modal popup-->
         <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog">
@@ -922,36 +927,33 @@
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-8">
-                                <div class="modal-body">
-                                    <!-- Project details-->
-                                    <h2 class="text-uppercase">Career.AI</h2>
-                                    <p class="item-intro text-muted">Let me help you decide you're career as fast asfk</p>
-                                    
-                                    <!--Quiz-->
-                                    <div class="start-screen">
-                                    </div>
-                                    <div id="display-container">
-                                        <div class="header-quiz">
-                                            <div class="number-of-count">
-                                                <span class="number-of-question">1 of 3 questions</span>
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <div class="modal-body">
+                                        <!-- Project details-->
+                                        <h2 class="text-uppercase">Career.AI</h2>
+                                        <p class="item-intro text-muted">Let me help you decide you're career as fast asfk</p>
+                                        
+                                        <!--Quiz-->
+                                        <div class="start-screen"></div>
+                                        <div id="display-container">
+                                            <div class="header-quiz">
+                                                <div class="number-of-count">
+                                                    <span class="number-of-question">1 of 3 questions</span>
+                                                </div>
+                                                <div class="timer-div">
+                                                    <img src="https://uxwing.com/wp-content/themes/uxwing/download/time-and-date/stopwatch-icon.png" class="d-block mb-1" width="20px"/>
+                                                    <span class="time-left">20s</span>
+                                                </div>
                                             </div>
-                                            <div class="timer-div">
-                                                <img src="https://uxwing.com/wp-content/themes/uxwing/download/time-and-date/stopwatch-icon.png"
-                                                    width="20px" />
-                                                <span class="time-left">10s</span>
+                                            <div id="container">
+                                                <!-- questions and options will be displayed here -->
                                             </div>
+                                            <button id="next-button">Next</button>
                                         </div>
-                                        <div id="container">
-                                             <!--questions and options will be displayed here -->
-                                        </div>
-                                        <button id="next-button">Next</button>
+                                        <div class="score-container hide"></div>
                                     </div>
-                                    <div class="score-container hide">
-                                    </div>
-                                </div>
                                 </div>
                             </div>
                         </div>
