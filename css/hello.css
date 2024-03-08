@@ -69,7 +69,7 @@
   margin: 0;
 }
 
-/*@media (max-width: 576px) {
+@media (max-width: 576px) {
   .content {
     max-width: auto !important;
     position: relative;
@@ -94,7 +94,7 @@
     font-size: 9px;
     margin-left: -0.5rem;
   }
-}*/
+}
 
 @media (max-width: 768px) {
   .content {
@@ -122,19 +122,6 @@
     padding-left: 40px;
   }
 }
-
-/*@media (min-width: 500px) {
-  .content {
-    position: relative;
-    left: 40%;
-  }
-}
-
-@media (min-width: 400px) {
-  .content {
-    display: none;
-  }
-}*/
 
 @-webkit-keyframes opacity {
 
