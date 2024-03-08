@@ -1,6 +1,6 @@
 :root {
     --bg: #000000;
-    --color: #e9d30f;
+    --color: #FFC800;
     --font: Montserrat, Roboto, Helvetica, Arial, sans-serif;
 }
 
@@ -32,7 +32,7 @@
     position: absolute;
     content: "";
     display: inline-block;
-    background-color: var(--color);
+    background: var(--color);
     color: var(--bg);
     border-radius: 50%;
     transition: transform 1s ease;

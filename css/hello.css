@@ -126,7 +126,7 @@
 @media (max-width: 300px) {
   .content {
     position: relative;
-    left: 5%;
+    left: -40%;
   }
 }
 

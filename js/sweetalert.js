@@ -202,7 +202,7 @@ function heart() {
         toast: true,
         position: pc,
         showConfirmButton: false,
-        timer: 8000,
+        timer: 10000,
         timerProgressBar: true,
         didOpen: (toast) => {
           toast.onmouseenter = Swal.stopTimer;
