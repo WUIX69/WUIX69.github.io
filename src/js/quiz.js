@@ -99,7 +99,7 @@ nextBtn.addEventListener(
             
             Swal.fire({
                 title: `You've got a ${scoreCount} out of ${quizArray.length}`,
-                text: scoreCount >= 0 && scoreCount <= 5 ? "WTF man!" : "Clutch!",
+                text: scoreCount >= 0 && scoreCount <= 5 ? "Better Luck Next Time!" : "Clutch!",
                 icon: "question",
                 showConfirmButton: true,
                 showCancelButton: true,
@@ -117,7 +117,7 @@ nextBtn.addEventListener(
                     restartQuiz();
 
                 }else{
-                    const results = ["You're a Bussiness related man","You're an Engineer, keep building man", "You're exactly a Programmer", "You're maybe good at Medical stuff", "You might choose Tourism, my guy", "You're an Artist, maybe ?", "You're a Gay man ( ͡° ͜ʖ ͡°)", "Si Nomer pa try niyo!" ];
+                    const results = ["You're a Bussiness related man","You're an Engineer, keep building man", "You're exactly a Programmer", "You're maybe good at Medical stuff", "You might choose Tourism, my guy", "You're an Artist, maybe ?", "You're a man ( ͡° ͜ʖ ͡°)", "Si Nomer pa try niyo!" ];
                     const randomResult = results[Math.floor(Math.random() * results.length)];
 
                     let timerInterval;
