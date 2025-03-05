@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Josephine Anne Angeles Veterinary Clinic</title>
+    <link rel="stylesheet" href="../../../public/vendor/bootstrap/dist/css/bootstrap-grid.min.css" />
+    <link rel="stylesheet" href="../../../public/vendor/bootstrap/dist/css/bootstrap-utilities.min.css" />
+    <link rel="stylesheet" href="../../../public/vendor/bootstrap/dist/css/bootstrap-reboot.min.css" />
+    <link rel="stylesheet" href="../../../public/vendor/fomantic-ui/dist/semantic.min.css" />
+    <link rel="stylesheet" href="../../../public/assets/css/global.css" />
+    <link rel="stylesheet" href="../../../public/assets/css/spinner.css" />
+    <link rel="stylesheet" href="../../../public/assets/css/landing.css" />
+    <style>
+        /* Services section styles */
+        .services-section {
+            padding: 120px 0 80px;
+            background: linear-gradient(135deg, #2c3e50 0%, #8fd3f4 100%);
+            min-height: 100vh;
+            position: relative;
+        }
+
+        .services-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .service-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .service-content {
+            padding: 20px;
+        }
+
+        .service-title {
+            font-size: 1.5rem;
+            color: var(--color-dark);
+            margin-bottom: 10px;
+        }
+
+        .service-description {
+            color: var(--color-dark-variant);
+            margin-bottom: 20px;
+        }
+
+        .book-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            background: #4e54c8;
+            color: white;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .book-button:hover {
+            background: #3a3f9c;
+            transform: translateY(-2px);
+        }
+
+        /* Appointment Form Styles */
+        .appointment-form {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin-top: 50px;
+        }
+
+        .form-title {
+            color: var(--color-dark);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="window-spinner-overlay"></div>
+    <div class="la-square-jelly-box window-spinner la-2x">
+        <div></div>
+        <div></div>
+    </div>
+
+    <!-- Top Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="navbar-logo">
+                <img src="../../../public/assets/img/logo.png" alt="Logo">
+                <div class="logo-text">
+                    <span class="logo-text-main">Vetsync</span>
+                </div>
+            </a>
+            <button class="mobile-menu-btn">
+                <span class="material-icons-sharp">menu</span>
+            </button>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="services.html" class="nav-link active">Services</a>
+                <a href="Product.html" class="nav-link">Products</a>
+                <a href="contact-us.html" class="nav-link">Contact Us</a>
+                <a href="about-us.html" class="nav-link">About Us</a>
+                <div class="actions">
+                    <div class="profile-menu">
+                        <div class="ui floating pointing selection icon dropdown profile-menu-dd">
+                            <i class="circle user icon"></i>
+                            <span class="text">Account</span>
+                            <i class="dropdown icon"></i>
+                            <div class="menu">
+                                <div class="item">
+                                    <a href="../auth/index.html" class="link">
+                                        <span class="material-icons-sharp">login</span>
+                                        Sign In
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="../auth/register.html" class="link">
+                                        <span class="material-icons-sharp">person_add</span>
+                                        Sign Up
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="ui red large button">
+                        Book Now
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-body">
+        <div class="row">
+            <div class="col">
+                <main class="container-main">
+                    <!-- Services Section -->
+                    <div class="section-container">
+                        <section class="section-wrapper services-section">
+                            <div class="section-title">
+                                <h2>Our Services</h2>
+                                <p>Comprehensive veterinary care for your beloved pets</p>
+                            </div>
+
+                            <div class="info-container">
+                                <div class="info-grid">
+                                    <!-- Service Card 1 -->
+                                    <div class="info-card">
+                                        <img src="../../../public/assets/img/contents/wellness.jpg"
+                                            alt="Wellness Checkup" class="info-image">
+                                        <div class="info-content">
+                                            <h3 class="info-title">Wellness Checkup</h3>
+                                            <p class="info-preview">
+                                                Regular health examinations and preventive care for your pets...
+                                            </p>
+                                            <p class="info-full">
+                                                Our comprehensive wellness checkups include thorough physical
+                                                examinations,
+                                                vaccinations, parasite prevention, and nutritional counseling to keep
+                                                your
+                                                pets healthy and happy.
+                                            </p>
+                                            <div class="read-more-btn">Book Now</div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Service Card 2 -->
+                                    <div class="info-card">
+                                        <img src="../../../public/assets/img/contents/vaccination.jpg" alt="Vaccination"
+                                            class="info-image">
+                                        <div class="info-content">
+                                            <h3 class="info-title">Vaccination</h3>
+                                            <p class="info-preview">
+                                                Essential vaccines to protect your pets from common diseases...
+                                            </p>
+                                            <p class="info-full">
+                                                We provide all core and recommended vaccinations for dogs and cats,
+                                                following the latest guidelines to ensure your pets are protected
+                                                against infectious diseases.
+                                            </p>
+                                            <div class="read-more-btn">Book Now</div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Service Card 3 -->
+                                    <div class="info-card">
+                                        <img src="../../../public/assets/img/contents/surgery.jpg" alt="Surgery"
+                                            class="info-image">
+                                        <div class="info-content">
+                                            <h3 class="info-title">Surgery</h3>
+                                            <p class="info-preview">
+                                                Professional surgical procedures in a state-of-the-art facility...
+                                            </p>
+                                            <p class="info-full">
+                                                Our experienced veterinary surgeons perform both routine and complex
+                                                procedures in our modern surgical suite, ensuring the highest standards
+                                                of care and safety for your pets.
+                                            </p>
+                                            <div class="read-more-btn">Book Now</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+
+                    <!-- Appointment Form Section -->
+                    <div class="section-container">
+                        <section class="section-wrapper">
+                            <div class="box">
+                                <h2 class="section-title">Book an Appointment</h2>
+                                <form class="ui form">
+                                    <div class="form-grid">
+                                        <div class="field">
+                                            <label>Pet Owner Name</label>
+                                            <input type="text" placeholder="Your Name">
+                                        </div>
+                                        <div class="field">
+                                            <label>Pet Name</label>
+                                            <input type="text" placeholder="Pet's Name">
+                                        </div>
+                                        <div class="field">
+                                            <label>Service</label>
+                                            <select class="ui dropdown">
+                                                <option value="">Select Service</option>
+                                                <option value="wellness">Wellness Checkup</option>
+                                                <option value="vaccination">Vaccination</option>
+                                                <option value="surgery">Surgery</option>
+                                            </select>
+                                        </div>
+                                        <div class="field">
+                                            <label>Preferred Date</label>
+                                            <input type="date">
+                                        </div>
+                                        <div class="field">
+                                            <label>Preferred Time</label>
+                                            <input type="time">
+                                        </div>
+                                        <div class="field">
+                                            <label>Contact Number</label>
+                                            <input type="tel" placeholder="Your Phone Number">
+                                        </div>
+                                    </div>
+                                    <button class="ui fluid large teal submit button" style="margin-top: 20px;">
+                                        Book Appointment
+                                    </button>
+                                </form>
+                            </div>
+                        </section>
+                    </div>
+                </main>
+
+                <!-- Footer -->
+                <footer class="footer-container">
+                    <div class="footer-section">
+                        <div class="ui inverted vertical footer segment pt-5 pb-5">
+                            <div class="ui container">
+                                <div class="ui stackable inverted divided equal height stackable grid">
+                                    <div class="three wide column">
+                                        <h4 class="ui inverted header">About</h4>
+                                        <div class="ui inverted link list">
+                                            <a href="#" class="item">Sitemap</a>
+                                            <a href="#" class="item">Contact Us</a>
+                                            <a href="#" class="item">Religious Ceremonies</a>
+                                            <a href="#" class="item">Gazebo Plans</a>
+                                        </div>
+                                    </div>
+                                    <div class="three wide column">
+                                        <h4 class="ui inverted header">Services</h4>
+                                        <div class="ui inverted link list">
+                                            <a href="#" class="item">Banana Pre-Order</a>
+                                            <a href="#" class="item">DNA FAQ</a>
+                                            <a href="#" class="item">How To Access</a>
+                                            <a href="#" class="item">Favorite X-Men</a>
+                                        </div>
+                                    </div>
+                                    <div class="seven wide column">
+                                        <h4 class="ui inverted header">Footer Header</h4>
+                                        <p>Extra space for a call to action inside the footer that could help re-engage
+                                            users.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="../../../public/lib/jquery/jquery.min.js"></script>
+    <script src="../../../public/lib/jquery/jquery.validate.min.js"></script>
+    <script src="../../../public/lib/jquery/additional-methods.min.js"></script>
+    <script src="../../../public/vendor/fomantic-ui/dist/semantic.min.js"></script>
+    <script src="../../../public/lib/lodash/lodash.min.js"></script>
+    <script src="../../../public/assets/js/spinner.js"></script>
+    <script src="../../../public/assets/js/darkmode.js"></script>
+    <script src="../../../public/assets/js/scripts.js"></script>
+    <script type="text/javascript">
+        // Handle navbar scroll effect
+        window.addEventListener('scroll', function () {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Handle mobile menu
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+
+        mobileMenuBtn.addEventListener('click', function () {
+            navLinks.classList.toggle('active');
+        });
+
+        // Handle profile menu toggle
+        const profileTrigger = document.querySelector('.profile-trigger');
+        const profileMenu = document.querySelector('.profile-menu');
+
+        profileTrigger.addEventListener('click', function (e) {
+            e.stopPropagation();
+            profileMenu.classList.toggle('active');
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function (e) {
+            if (!profileMenu.contains(e.target)) {
+                profileMenu.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+
+</html>
